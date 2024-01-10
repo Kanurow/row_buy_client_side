@@ -5,9 +5,7 @@ export default function OtherProducts({ user }) {
   return (
     <>
     <div>
-    <div className='advert'>
-        <img className="ad-image"  alt="advert" />
-      </div>
+    
 
       <div className='page-title'>
         Others - A Flexible Category

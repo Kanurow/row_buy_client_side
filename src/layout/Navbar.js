@@ -5,7 +5,7 @@ import { NavDropdown } from 'react-bootstrap';
 import "./Navbar.css";
 import logo from '../jumia_logo.png';
 import { AiOutlineUser, AiOutlineShoppingCart } from 'react-icons/ai';
-import { BiHelpCircle } from 'react-icons/bi'
+import { BiHelpCircle } from 'react-icons/bi';
 import QueryCarousel from '../pages/QueryCarousel';
 
 const Navbar = ({ user }) => {
@@ -17,7 +17,15 @@ const Navbar = ({ user }) => {
     const fetchUserCart = async () => {
       try {
         if (user && user.id) {
-          await fetchUserShoppingCart(user.id);
+          const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/cart/${user.id}`, {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+              windows: 'true',
+            },
+          });
+          const cartWithData = response.data.map((cartItem) => ({ ...cartItem }));
+          setCart(cartWithData);
         }
       } catch (error) {
         setError(error.message);
@@ -25,26 +33,15 @@ const Navbar = ({ user }) => {
     };
 
     fetchUserCart();
+
+    const intervalId = setInterval(() => {
+      fetchUserCart();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
   }, [user]);
 
   const isUserAdmin = user?.role === "[Role(id=2, name=ROLE_ADMIN)]";
-
-  const fetchUserShoppingCart = async (userId) => {
-    try {
-      const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/cart/${userId}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
-          windows: 'true',
-        },
-      });
-      const cartWithData = response.data.map((cartItem) => ({ ...cartItem }));
-
-      setCart(cartWithData);
-    } catch (error) {
-      setError(error.message);
-    }
-  };
 
   return (
     <div>
@@ -54,6 +51,7 @@ const Navbar = ({ user }) => {
             <img className="logo-image" src={logo} alt="Logo" />
           </Link>
 
+          
           <div className="d-flex justify-content-center align-items-center with-tooltip" data-tooltip="Enter product you wish to find">
             <form className="d-flex">
               <input
@@ -102,11 +100,12 @@ const Navbar = ({ user }) => {
               <Link className='icons-text' to={"/cart"}>Cart</Link>
             </div>
           </div>
+
         </div>
       </nav>
       <QueryCarousel query={query} user={user} />
     </div>
   );
-}
+};
 
 export default Navbar;

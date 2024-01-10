@@ -81,7 +81,6 @@ function VendorsProducts( { user }) {
   return (
     <div>
       <div className='container mt-4'>
-        <h5>Products supplied by {user.firstName} </h5>
               <CartNotification showCartNotification={showCartNotification} />
         <div className='product-grid'>
           

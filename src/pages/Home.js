@@ -17,11 +17,13 @@ import axios from 'axios';
 import ReactPaginate from 'react-paginate';
 import { BiUserCheck } from 'react-icons/bi';
 
-export default function Home({ allProducts, user }) {
+
+export default function Home({ user }) {
 
   const [offset, setOffset] = useState(0);
   const [pageSize, setPageSize] = useState(6);
   const [sortBy, setSortBy] = useState('productName');
+  const [allProducts, setAllProducts] = useState([]);
 
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
@@ -42,6 +44,17 @@ export default function Home({ allProducts, user }) {
           }
         );
         setProducts(productsResponse.data);
+        const allProductsResponse = await axios.get(
+          'https://jumia-clone-rowland.onrender.com/api/products/all',
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+              windows: 'true',
+            },
+          }
+        );
+        setAllProducts(allProductsResponse.data);
       } catch (error) {
         setError(error.message);
       }
@@ -79,7 +92,7 @@ export default function Home({ allProducts, user }) {
         setShowCartNotification(false);
       }, 6000);
     } catch (error) {
-      setError('Cannot add a product twice. Please refresh the page.');
+      setError('Error: '+ error.message);
     }
   };
 
@@ -153,7 +166,12 @@ export default function Home({ allProducts, user }) {
           <ProductsCarousel allProducts={allProducts} user={user} />
         </div>
 
-        { user === undefined && 
+
+        {allProducts.length === 0 ? (
+          <div className='refresh-message'>
+            <h4>Slow network, please refresh the page and wait a few seconds.</h4>
+          </div>
+        ) : (
 
         <div className='product-grid-container container'>
           <div className='product-grid-header'>
@@ -232,10 +250,8 @@ export default function Home({ allProducts, user }) {
             activeClassName='active'
           />
         </div>
-
-        }
+        )}
       </div>
-
       <Footer />
     </>
   );

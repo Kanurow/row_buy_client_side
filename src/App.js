@@ -79,7 +79,7 @@ function App() {
         <Navbar user={user} />
         
         <Routes>
-          <Route exact path="/" element={<Home allProducts={allProducts} user={user} />} />
+          <Route exact path="/" element={<Home user={user} />} />
           <Route  element={<ProductsCarousel user={user} />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Signin />} />
@@ -108,9 +108,6 @@ function App() {
 
 
         </Routes>
-
-        
-
       </Router>
 
     </div>

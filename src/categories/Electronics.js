@@ -5,16 +5,12 @@ export default function Electronics( {user}) {
   return (
     <>
     <div>
-        <div className='advert'>
-          <img className="ad-image"  alt="advert" />
-        </div>
+        
 
         <div className='page-title'>
           Electronics
         </div>
-        <div className='advert'>
-          <img className="advert-image"  alt="advert" />
-        </div>
+        
     </div>
 
     <ElectronicsCarousel user={user} />

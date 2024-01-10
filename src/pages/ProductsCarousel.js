@@ -8,13 +8,10 @@ import { Link } from 'react-router-dom';
 
 
 
-function CartNotification({ showCartNotification }) {
+function CartNotification({ showCartNotification, message }) {
   return (
-    <div
-      id='cart-notification' 
-      style= {{ display: showCartNotification ? 'block' : 'none' }}
-    >
-      Product Added To Cart
+    <div id='querycart-notification' style={{ display: showCartNotification ? 'block' : 'none' }}>
+      {message}
     </div>
   );
 }
@@ -23,6 +20,7 @@ function ProductsCarousel({ user }) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [showCartNotification, setShowCartNotification] = useState(false);
+  const [cartNotificationMessage, setCartNotificationMessage] = useState('');
 
 
   useEffect(() => {
@@ -71,14 +69,20 @@ function ProductsCarousel({ user }) {
       })
     );
 
-      setShowCartNotification(true);
-      setTimeout(() => {
-        setShowCartNotification(false);
-      }, 6000);
-    } catch (error) {
-      setError('Cannot add a product twice. Please refresh the page.');
-    }
-  };
+    setShowCartNotification(true);
+    setCartNotificationMessage('Product Added To Cart');
+    setTimeout(() => {
+      setShowCartNotification(false);
+      setCartNotificationMessage('');
+    }, 5000);
+  } catch (error) {
+    setShowCartNotification(true);
+    setCartNotificationMessage(error.message); 
+    setTimeout(() => {
+      setShowCartNotification(false);
+    }, 5000);
+  }
+};
 
 
 
@@ -107,8 +111,10 @@ function ProductsCarousel({ user }) {
   return (
     <>
     <div className='all'>
-    <CartNotification showCartNotification={showCartNotification} />
+    <CartNotification showCartNotification={showCartNotification} message={cartNotificationMessage} />
+
       <div className='product-title'>
+      
         
         {user === undefined && "Log in to add products to your shopping cart. To create an admin level account type add 'row' to your registeration email "}
         {products.length > 0 && "Top Selling Items"}

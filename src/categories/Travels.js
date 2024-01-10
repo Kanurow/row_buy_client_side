@@ -1,13 +1,8 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-
-
-
+import React from 'react'
 import "./travels.css"
 import imgAdvertLeft from '../components/imgs/bed.jpg';
 import imgAdvertRight from '../components/imgs/travels.jpg';
 import TravelsCarousel from './TravelsCarousel';
-
 
 
 function Travels( {user}) {

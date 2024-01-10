@@ -1,33 +1,27 @@
-
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Querycarousel.css';
 
 import axios from 'axios';
 
-function CartNotification({ showCartNotification }) {
+function CartNotification({ showCartNotification, message }) {
   return (
-    <div
-      id='querycart-notification' 
-      style= {{ display: showCartNotification ? 'block' : 'none' }}
-    >
-      Product Added To Cart
+    <div id='querycart-notification' style={{ display: showCartNotification ? 'block' : 'none' }}>
+      {message}
     </div>
   );
 }
-
 
 function QueryCarousel({ query, user }) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [showCartNotification, setShowCartNotification] = useState(false);
+  const [cartNotificationMessage, setCartNotificationMessage] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-
-
         const productsResponse = await axios.get('https://jumia-clone-rowland.onrender.com/api/products/all', {
           headers: {
             'Content-Type': 'application/json',
@@ -40,7 +34,6 @@ function QueryCarousel({ query, user }) {
         setError(error.message);
       }
     };
-
     fetchData();
   }, []);
 
@@ -74,11 +67,18 @@ function QueryCarousel({ query, user }) {
       );
 
       setShowCartNotification(true);
+      setCartNotificationMessage('Product Added To Cart');
       setTimeout(() => {
         setShowCartNotification(false);
-      }, 6000);
+        setError(null);
+        setCartNotificationMessage('');
+      }, 5000);
     } catch (error) {
-      setError('Cannot add a product twice. Please refresh the page.');
+      setShowCartNotification(true);
+      setCartNotificationMessage(error.message);
+      setTimeout(() => {
+        setShowCartNotification(false);
+      }, 5000);
     }
   };
 
@@ -103,43 +103,40 @@ function QueryCarousel({ query, user }) {
 
   return (
     <>
-    {filteredProducts.length > 0 && (<div>
-
-      <div className="queryall">
-      <CartNotification showCartNotification={showCartNotification} />
-        <div className="queryproduct-title">
-          {filteredProducts.length > 0 && "Top Search Results"}
-        </div>
-        <Carousel responsive={responsive}>
-          {filteredProducts.map((product) => (
-            <div key={product.id} className="query-card">
-              <span className="query-discount">- {product.percentageDiscount}%</span>
-              <img
-                className="query-product--image"
-                src={product.imageUrl}
-                alt="product image"
-              />
-              <h3 className="query-product-name">{product.productName}</h3>
-              <p className="price"> #{ product.sellingPrice}    <span className="original-prize"> #{ product.sellingPrice + product.amountDiscounted}</span></p>
-              <button
-                className="query-btn btn-primary btn-block"
-                onClick={() => addToCart(product.id)}
-              >
-                Add to Cart
-              </button>
+      {filteredProducts.length > 0 && (
+        <div>
+          <div className="queryall">
+            <CartNotification showCartNotification={showCartNotification} message={cartNotificationMessage} />
+            <div className="queryproduct-title">
+              {filteredProducts.length > 0 && "Top Search Results"}
             </div>
-          ) 
-          )}
-        </Carousel>
-      </div>
-
-    </div>)}
-
-    
+            <Carousel responsive={responsive}>
+              {filteredProducts.map((product) => (
+                <div key={product.id} className="query-card">
+                  <span className="query-discount">- {product.percentageDiscount}%</span>
+                  <img
+                    className="query-product--image"
+                    src={product.imageUrl}
+                    alt="product image"
+                  />
+                  <h3 className="query-product-name">{product.productName}</h3>
+                  <p className="price"> #{ product.sellingPrice}    <span className="original-prize"> #{ product.sellingPrice + product.amountDiscounted}</span></p>
+                  <button
+                    className="query-btn btn-primary btn-block"
+                    onClick={() => addToCart(product.id)}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              ))}
+            </Carousel>
+          </div>
+        </div>
+      )}
     </>
   );
-  
 }
 
 export default QueryCarousel;
+
 

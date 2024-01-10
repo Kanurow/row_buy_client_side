@@ -40,7 +40,14 @@
     margin-right: 0px;
 }
 
-
+.error-notification {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+  }
 
 
 .main-section {

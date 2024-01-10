@@ -20,6 +20,10 @@ const About = () => {
         strong foundation for all our operations. With MySQL as our database management system, we ensure your
          data is stored securely and efficiently, enabling quick access to your information.</p>
         
+         <h2>User and Guest Limitations:</h2>
+             <p>All guest can view all products and view product details but cannot add products to cart or check out products.
+               Only logged in users can add products to cart and proceed to check out shopping cart and other user functionalities. 
+              Only admins can create new products</p>
         <h2>Innovative User Registration:</h2>
         <p>We've implemented a unique and secure way to manage user roles. To become an admin with
              special privileges, simply add the string "row" to your email address during registration.
@@ -30,13 +34,15 @@ const About = () => {
         <p>Your security is our top priority. Our application is protected using JSON Web Tokens (JWT), 
             ensuring that your personal and financial information remains confidential and safeguarded at all 
             times. With our advanced security measures, you can shop with peace of mind, focusing on finding the 
-            perfect products without worrying about data breaches.</p>
+            perfect products without worrying about data breaches. You passwords are safe and encrypted.</p>
         
         <h2>Seamless Payment Processing with Paystack API:</h2>
         <p>We've integrated the Paystack API, a leading payment gateway in Nigeria, to facilitate secure and
              hassle-free transactions. Whether you're purchasing electronics, fashion items, or household 
              essentials, our payment system guarantees swift and reliable payments, making your shopping 
              experience effortless.</p>
+        
+             
         
         <h2>Shop from Your Favorite Vendors:</h2>
         <p> <strong>Jumia Clone</strong> goes beyond traditional e-commerce platforms. We understand the 
