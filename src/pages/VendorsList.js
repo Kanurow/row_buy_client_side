@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './VendorsList.css';
-import anonymous from "./JUMIA_VENDOR.png";
+import anonymous from "./RowBuyVendor.png";
 
 function VendorsList() {
   const [vendors, setVendors] = useState([]);

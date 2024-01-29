@@ -14,7 +14,7 @@
   }
 
   .searchbtn {
-    background-color: #e26804;
+    background-color: #08bcf3;
   }
   .top-right .bold {
     font-weight: 700;
@@ -22,7 +22,7 @@
   }
 
   .searchbtn:hover {
-    background-color: #be5b09;
+    background-color: #08bcf3;
   }
   .form-control {
     width: 300px;
@@ -39,12 +39,16 @@
   }
 
   .logo-image {
-    height: 40px; 
+    height: 110px;
   }
   
   .icons {
     display: flex;
     margin-right: 15px;
+    margin-top: 20px;
+  }
+  .user-name {
+    margin-top: 20px;
   }
   
 
@@ -69,20 +73,20 @@
     opacity: 1;
   }
   .signin {
-    background-color: #f57004;
+    background-color: #08bcf3;
   }
 
   .signin:hover {
     background-color: #ffffff;
-    color: #e26804;
+    color: #08bcf3;
     border-style: solid;
     border-radius: 10px;
-    border-color: #be5b09;
+    border-color: #08bcf3;
   }
 
   .dropdown-item:hover {
     background-color: #ffffff;
-    color: #e26804;
+    color: #08bcf3;
   }
 
   .cart-tooltip {
@@ -97,10 +101,19 @@
     color: rgb(255, 255, 255);
     font-size: 12px;
     width: 20px;
-    background-color: #be5b09;
+    background-color: #08bcf3;
     border-radius: 11px;
   }
 
   .bold .amount {
     font-size: 12px;
   }
+.orange-btn {
+    background-color: #08bcf3; 
+    border-color: #08bcf3; 
+    color: rgb(255, 255, 255);
+}
+.orange-btn:hover,
+.orange-btn:focus {
+    background-color: #08bcf3;
+}

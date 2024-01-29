@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import top from './myjumia-top.png';
-import bottom from "./myjumia-bottom-logo.png";
+import top from './row-buy-logo.png';
+import bottom from "./row-buy-logo.png";
 import Footer from '../layout/Footer';
 
 const CreateProductForm = ({ user }) => {

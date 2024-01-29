@@ -148,7 +148,7 @@ function ShoppingCart({ user }) {
                 <div className='product-info'>
                   <div className='prod-name'>{item.product.productName} </div>
                   <div className='prod-qty'>{item.product.quantity} units</div>
-                  <div className='jumia-express'><span className='jumia'>JUMIA</span> <BsRocketTakeoff size={12} /> <span className='express'>EXPRESS</span></div>
+                  <div className='row-buy-express'><span className='row-buy'>JUMIA</span> <BsRocketTakeoff size={12} /> <span className='express'>EXPRESS</span></div>
                 </div>
 
                 <div>

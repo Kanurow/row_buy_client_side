@@ -2,8 +2,8 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import top from './myjumia-top.png';
-import bottom from "./myjumia-bottom-logo.png";
+import top from './row-buy-logo.png';
+import bottom from "./row-buy-logo.png";
 
 import "./Auth.css";
 import Footer from '../layout/Footer';
@@ -55,7 +55,7 @@ export default function Signin() {
         <div className='row'>
           <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
             <h2 className='text-center m-4'>
-              <img className="jumia-top" src={top} alt="top" />
+              <img className="row-buy-top" src={top} alt="top" />
               <h3>Welcome to Jumia.</h3>
             </h2>
             <form onSubmit={onSubmit}>
@@ -93,7 +93,7 @@ export default function Signin() {
             </form>
           </div>
         </div> 
-        <img className="jumia-bottom" src={bottom} alt="top" />
+        <img className="row-buy-bottom" src={bottom} alt="top" />
 
       </div>
       <Footer />

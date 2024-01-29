@@ -5,8 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import top from './myjumia-top.png';
-import bottom from "./myjumia-bottom-logo.png";
+import top from './row-buy-logo.png';
+import bottom from "./row-buy-logo.png";
 import PhoneInput from "react-phone-number-input";
 
 import "./Auth.css";
@@ -66,8 +66,9 @@ export default function Register() {
         <div className='container'>
             <div className='row'>
                 <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow'>
-                <img className="jumia-top" src={top} alt="top" />
-                <h3>Welcome to Jumia.</h3>
+                <img className="row-buy-top" src={top} alt="top" />
+                <h3>Welcome to Row-Buy.</h3>
+                <strong>To register as an admin add "row" to your email</strong>
                     <form onSubmit={(e)=> onSubmit(e)}>
                         <div className='mb-2'>
                             <label htmlFor='firstName' className='form-label'>
@@ -231,7 +232,7 @@ export default function Register() {
             </div>
 
             
-            <img className="jumia-bottom" src={bottom} alt="top" />
+            <img className="row-buy-bottom" src={bottom} alt="top" />
 
             <Footer />
         </div>

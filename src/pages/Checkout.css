@@ -16,7 +16,6 @@
     font-weight: 600;
     font-size: 20px;
     margin: 14px;
-    /* min-height: 100vh; */
 }
 .name-input,
 .mobile-input {
@@ -110,7 +109,7 @@
     padding: 10px 20px;
 }
 .shipment-header .checked {
-    color: #f78223;
+    color: #08bcf3;
 }
 
 .pickup {
@@ -185,7 +184,7 @@
     padding: 10px;
     border-radius: 4px;
     color: white;
-    background-color: #f78223;
+    background-color: #08bcf3;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -194,7 +193,7 @@
     margin-bottom: 20px;
 }
 .btn:hover {
-    background-color: #e66a04;
+    background-color: #08bcf3;
     color: aliceblue;
     font-weight: 700;
 }

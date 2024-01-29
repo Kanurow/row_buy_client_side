@@ -25,7 +25,7 @@
 }
 .top-info .top-discount {
     padding: 4px 8px;
-    color: #f57004;
+    color: #08bcf3;
     background-color: #dddad7;
     border-radius: 3px;
 }
@@ -60,7 +60,7 @@
 }
 .p-price .p-discount {
     text-decoration: line-through;
-    color: rgb(107, 79, 36);
+    color: #08bcf3;
     font-size: 14px;
     margin-left: 20px;
 }
@@ -73,7 +73,7 @@
     outline: 0;
     padding: 10px;
     color: white;
-    background-color: #f78223;
+    background-color: #08bcf3;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -82,7 +82,7 @@
     margin-bottom: 5px;
 }
 .add-to-cart:hover {
-    background-color: #ff7300;
+    background-color: #08bcf3;
     color: aliceblue;
     font-weight: 900;
 }
@@ -95,7 +95,7 @@
     margin-right: 20px;
 }
 #cart-notification {
-    color: red;
+    color: #08bcf3;
     position: relative;
     display: flex;
     background-color: darkgray;

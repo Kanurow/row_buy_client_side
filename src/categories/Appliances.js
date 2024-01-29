@@ -8,8 +8,6 @@ export default function Appliances( {user}) {
     <>
     <div className='component'>
           <div>
-
-
         <div className='page-title'>
           Appliances
         </div>

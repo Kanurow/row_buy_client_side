@@ -29,6 +29,7 @@ import EditUser from './pages/EditUser';
 import VendorsOrders from './pages/VendorsOrders';
 import Logout from './form/Logout';
 import About from './pages/About';
+import Signout from './form/Signout';
 
 function App() {
 
@@ -105,7 +106,7 @@ function App() {
           <Route exact path='/viewVendor/:id' element={<VendorsProducts user={user} />} />
           <Route exact path="/edituser/:id" element={<EditUser />} />
           <Route exact path='/about' element={<About />} />
-
+          <Route exact path='/signout' element={<Signout />}/>
 
         </Routes>
       </Router>

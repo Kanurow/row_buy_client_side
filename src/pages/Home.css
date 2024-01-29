@@ -6,7 +6,7 @@
     left: 40px;
     margin-top: 30px;
     height: 300px;
-    background-color: rgb(235, 225, 225);
+    background-color: rgb(199, 234, 245);
 }
 
 .sidebar-react-icon{
@@ -41,11 +41,11 @@
 }
 
 .error-notification {
-    background-color: #ffcccc;
-    color: #ff0000;
+    background-color: #77d3cb;
+    color: #08bcf3;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ff0000;
+    border: 1px solid #08bcf3;
     border-radius: 5px;
   }
 
@@ -88,6 +88,6 @@
     margin-bottom: 0px;
 }
 hr {
-    color: rgb(212, 133, 30);
+    color: #08bcf3;
     margin: 0px;
 }

@@ -1,7 +1,7 @@
-
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import Footer from '../layout/Footer';
 
 export default function EditUser() {
     const [error, setError] = useState(null);
@@ -267,8 +267,6 @@ export default function EditUser() {
                 
                 }
             </div>
-
-
                   <button type='submit' className='btn btn-outline-info'>Update Profile Details</button>
                   <Link className='btn btn-outline-danger mx-2' to={"/"}>Cancel</Link>
                   {error && <p className="text-danger">{error} : You have to be an admin.</p>}
@@ -276,14 +274,11 @@ export default function EditUser() {
               </form>
 
 
-
-
         </div>
-
-
       </div>
 
     </div>
+    <Footer />
 
     </>
   )

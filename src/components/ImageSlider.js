@@ -5,13 +5,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import '../components/ImageSlider.css';
 
 
-import img1 from '../components/imgs/jumiaslider1.png';
-import img2 from '../components/imgs/jumiaslider2.png';
-import img3 from '../components/imgs/jumiaslider3.png';
-import img4 from '../components/imgs/jumiaslider4.png';
-import img5 from '../components/imgs/jumiaslider5.jpg';
-import img6 from '../components/imgs/jumiaslider6.jpg';
-import img7 from '../components/imgs/jumiaslider7.gif';
+import img1 from '../components/imgs/row-bank-1.webp';
+import img2 from '../components/imgs/row-bank-2.webp';
+import img3 from '../components/imgs/row-bank-3.webp';
+import img4 from '../components/imgs/row-bank-4.webp';
+import img5 from '../components/imgs/row-bank-5.webp';
+import img6 from '../components/imgs/row-bank-7.webp';
+import img7 from '../components/imgs/row-bank-8.jpg';
 
 
 

@@ -1,11 +1,11 @@
-.jumia-top {
+.row-buy-top {
     width: 50px;
 }
-.jumia-bottom {
+.row-buy-bottom {
     margin: 50px;
 }
 .execute{
-    background-color: #e26804;
+    background-color: #08bcf3;
     border-style: none;
     color: white;
 }
