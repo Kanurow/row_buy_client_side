@@ -1,71 +1,71 @@
-# Getting Started with Create React App
+# Welcome to Row-Buy Application 
+Project Live Link: [Row-Buy](https://row-buy.netlify.app/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Innovative Shopping Experience
 
-## Available Scripts
+Row-Buy Application is more than just an e-commerce platform; it's a tailored shopping experience crafted with your needs in mind. Our web application, developed from the ground up, redefines online shopping by seamlessly combining cutting-edge technology with a user-friendly design.
 
-In the project directory, you can run:
+### Tech Foundation
+Row-Buy boasts a robust technology stack to power our platform:
 
-### `npm start`
+Front End: Utilizing React ensures a smooth, responsive, and interactive user interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Back End: Our backend is constructed with Spring Boot, providing a reliable and secure foundation for all operations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Database: MySQL serves as our database management system, storing your data securely and efficiently, enabling quick access to your information.
 
-### `npm test`
+### User and Guest Engagement
+Guests: Explore all products and view details without the ability to add items to the cart or proceed to checkout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Logged-in Users: Access additional functionalities such as adding products to the cart and checking out.
 
-### `npm run build`
+Admin Privileges: Exclusive product creation rights are reserved for admins.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Innovative User Registration
+Experience a unique and secure user role management system:
+To gain admin privileges, append the string "row" to your email during registration, granting enhanced control over your shopping experience and access to special features.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Enhanced Security using JWT Tokens
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your security is paramount:
+The Row-Buy application prioritizes the protection of your personal and financial information through the use of JSON Web Tokens (JWT). Rest assured that your passwords are securely encrypted, allowing you to shop worry-free.
+Seamless Payment with Paystack API
+Row-Buy integrates the Paystack API, a leading Nigerian payment gateway, to facilitate secure and hassle-free transactions:
 
-### `npm run eject`
+Whether it's electronics, fashion, or household essentials, our payment system ensures swift and reliable transactions for an effortless shopping experience.
+Shop from Your Preferred Vendors
+Row-Buy goes beyond traditional e-commerce:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Introducing a feature that allows you to directly shop from your favorite vendors. Discover unique products, support local businesses, and enjoy a personalized shopping journey tailored to your preferences.
+Join Us at Row-Buy
+At Row-Buy, we're not just revolutionizing online shopping; we're enhancing it. Experience the future of e-commerce today – start exploring, start shopping, and let us redefine the way you shop online. Thank you for choosing Row-Buy as your preferred online shopping destination.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Happy Shopping!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Please Note
+Thought the project is live, it is still in development. For this reason the check out is a test and no actual money will be debited as no card information is needed. This is the client side codebase.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation and Set Up
+### Front-end - React
+- Clone the repository
+- run the command
+`git clone`
 
-## Learn More
+https://github.com/Kanurow/row_buy_client_side
+Gives you a copy of the project on your local drive. Change directory into the folder named 'frontend' and geobyte/geobyte-task folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Install dependencies
+Run the command below to install project dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm install`
 
-### Code Splitting
+then start the project with 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`npm start`
 
-### Analyzing the Bundle Size
+- The server port will run on your local host at  `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Live Link
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# jumia_clone_frontend
+Project Live Link: [Row-Buy](https://row-buy.netlify.app/).
