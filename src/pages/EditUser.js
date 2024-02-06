@@ -18,7 +18,7 @@ export default function EditUser() {
     useEffect(() => {
     const fetchUser = async () => {
         try {
-          const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/users/${id}`, {
+          const response = await axios.get(`https://row-buy.onrender.com/api/users/${id}`, {
 
             headers: {
               'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ export default function EditUser() {
       formData.append('userId', user.id);
   
       try {
-        const response = await axios.put("https://jumia-clone-rowland.onrender.com/api/users/updateUserInformation", formData, {
+        const response = await axios.put("https://row-buy.onrender.com/api/users/updateUserInformation", formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -85,7 +85,7 @@ export default function EditUser() {
       formData.append('userId', user.id);
   
       try {
-        const response = await axios.put("https://jumia-clone-rowland.onrender.com/api/users/updateUserInformation", formData, {
+        const response = await axios.put("https://row-buy.onrender.com/api/v1/users/updateUserInformation", formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

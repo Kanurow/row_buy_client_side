@@ -34,7 +34,7 @@ export default function Home({ user }) {
       try {
 
         const productsResponse = await axios.get(
-          `https://jumia-clone-rowland.onrender.com/api/products/paged/${offset}/${pageSize}/${sortBy}`,
+          `https://row-buy.onrender.com/api/v1/products/paged/${offset}/${pageSize}/${sortBy}`,
           {
             headers: {
               'Content-Type': 'application/json',
@@ -44,8 +44,9 @@ export default function Home({ user }) {
           }
         );
         setProducts(productsResponse.data);
+        console.log(productsResponse);
         const allProductsResponse = await axios.get(
-          'https://jumia-clone-rowland.onrender.com/api/products/all',
+          'https://row-buy.onrender.com/api/v1/products/all',
           {
             headers: {
               'Content-Type': 'application/json',
@@ -70,7 +71,7 @@ export default function Home({ user }) {
   const addToCart = async (productId) => {
     try {
       const response = await axios.post(
-        `https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}/${user.id}`,
+        `https://row-buy.onrender.com/api/products/addtocart/${productId}/${user.id}`,
         null,
         {
           headers: {

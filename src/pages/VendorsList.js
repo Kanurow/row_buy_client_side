@@ -11,7 +11,7 @@ function VendorsList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://jumia-clone-rowland.onrender.com/api/users/getVendors', {
+        const response = await axios.get('https://row-buy.onrender.com/api/v1/users/getVendors', {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

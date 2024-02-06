@@ -25,7 +25,7 @@ function OtherProductsCarousel( {user} ) {
     const fetchData = async () => {
       try {
         const productsResponse = await axios.get(
-          'https://jumia-clone-rowland.onrender.com/api/products/others',
+          'https://row-buy.onrender.com/api/v1/products/others',
           {
             headers: {
               'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function OtherProductsCarousel( {user} ) {
   const addToCart = async (productId) => {
     try {
       const response = await axios.post(
-        `https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}/${user.id}`,
+        `https://row-buy.onrender.com/api/v1/products/addtocart/${productId}/${user.id}`,
         null,
         {
           headers: {

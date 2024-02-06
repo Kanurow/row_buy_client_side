@@ -28,7 +28,7 @@ function VendorsProducts( { user }) {
       const vendorProducts = async () => {
         try {
 
-          const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/vendor/${id}`, {
+          const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/vendor/${id}`, {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -49,7 +49,7 @@ function VendorsProducts( { user }) {
     const addToCart = async (productId) => {
       try {
         const response = await axios.post(
-          `https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}/${user.id}`,
+          `https://row-buy.onrender.com/api/v1/products/addtocart/${productId}/${user.id}`,
           null,
           {
             headers: {

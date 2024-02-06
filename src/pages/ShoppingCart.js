@@ -30,7 +30,7 @@ function ShoppingCart({ user }) {
 
   const fetchUserShoppingCart = async (userId) => {
     try {
-      const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/cart/${userId}`, {
+      const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/cart/${userId}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -51,7 +51,7 @@ function ShoppingCart({ user }) {
   const removeItem = async (id) => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      await axios.delete(`https://jumia-clone-rowland.onrender.com/api/products/removefromcart/${id}`, {
+      await axios.delete(`https://row-buy.onrender.com/api/v1/products/removefromcart/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${accessToken}`,
@@ -71,7 +71,7 @@ function ShoppingCart({ user }) {
   const addItem = async (productId) => {
     const accessToken = localStorage.getItem('accessToken');
     try {
-      const response = await axios.post(`https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}`, {
+      const response = await axios.post(`https://row-buy.onrender.com/api/v1/products/addtocart/${productId}`, {
       }, {
         headers: {
           'Content-Type': 'application/json',

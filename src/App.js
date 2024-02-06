@@ -42,7 +42,7 @@ function App() {
     const fetchData = async () => {
       try {
         const userResponse = await axios.get(
-          'https://jumia-clone-rowland.onrender.com/api/users/user/me',
+          'https://row-buy.onrender.com/api/v1/users/user/me',
           {
             headers: {
               'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ function App() {
         setUser(userResponse.data);
 
         const productsResponse = await axios.get(
-          'https://jumia-clone-rowland.onrender.com/api/products/all',
+          'https://row-buy.onrender.com/api/v1/products/all',
           {
             headers: {
               'Content-Type': 'application/json',
@@ -68,9 +68,8 @@ function App() {
         setError(error.message);
       }
     };
-
     fetchData();
-  }, []);
+  }, []); 
 
   
   return (

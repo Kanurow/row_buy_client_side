@@ -25,7 +25,7 @@ export default function Signin() {
   const  onSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://jumia-clone-rowland.onrender.com/api/auth/signin', {
+      const response = await axios.post('https://row-buy.onrender.com/api/v1/auth/signin', {
         usernameOrEmail,
         password,
       });

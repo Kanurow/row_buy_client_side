@@ -28,7 +28,7 @@ const OrderHistory = ({ user }) => {
   useEffect(() => {
     const fetchUserOrders = async () => {
       try {
-        const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/orderHistory/${user.id}`, {
+        const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/orderHistory/${user.id}`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

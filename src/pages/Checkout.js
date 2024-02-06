@@ -48,7 +48,7 @@ function Checkout({ user }) {
       }));
 
       const response = await axios.post(
-        `https://jumia-clone-rowland.onrender.com/api/products/checkout/${user.id}`,
+        `https://row-buy.onrender.com/api/v1/products/checkout/${user.id}`,
         {
           firstName: firstName,
           lastName: lastName,
@@ -314,9 +314,3 @@ function Checkout({ user }) {
 }
 
 export default Checkout;
-
-
-
-
-
-

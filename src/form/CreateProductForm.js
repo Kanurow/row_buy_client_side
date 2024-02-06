@@ -35,7 +35,7 @@ const CreateProductForm = ({ user }) => {
     formData.append('userId', user.id);
 
     try {
-      const response = await axios.post("https://jumia-clone-rowland.onrender.com/api/products/createProduct", formData, {
+      const response = await axios.post("https://row-buy.onrender.com/api/v1/products/createProduct", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

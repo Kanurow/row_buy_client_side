@@ -28,7 +28,7 @@ export default function ViewProduct( {user} ) {
           try {
  
 
-            const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/view/${id}`, {
+            const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/view/${id}`, {
               headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -47,7 +47,7 @@ export default function ViewProduct( {user} ) {
       const addToCart = async (productId) => {
         try {
           const response = await axios.post(
-            `https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}/${user.id}`,
+            `https://row-buy.onrender.com/api/v1/products/addtocart/${productId}/${user.id}`,
             null,
             {
               headers: {

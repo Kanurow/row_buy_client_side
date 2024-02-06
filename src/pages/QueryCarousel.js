@@ -22,7 +22,7 @@ function QueryCarousel({ query, user }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productsResponse = await axios.get('https://jumia-clone-rowland.onrender.com/api/products/all', {
+        const productsResponse = await axios.get('https://row-buy.onrender.com/api/v1/products/all', {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
@@ -46,7 +46,7 @@ function QueryCarousel({ query, user }) {
   const addToCart = async (productId) => {
     try {
       const response = await axios.post(
-        `https://jumia-clone-rowland.onrender.com/api/products/addtocart/${productId}/${user.id}`,
+        `https://row-buy.onrender.com/api/v1/products/addtocart/${productId}/${user.id}`,
         null,
         {
           headers: {

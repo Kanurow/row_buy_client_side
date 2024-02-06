@@ -13,7 +13,7 @@ useEffect(() => {
         const fetchProduct = async () => {
           try {
 
-            const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/vendors/productsOrdered/${user.id}`, {
+            const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/vendors/productsOrdered/${user.id}`, {
               headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

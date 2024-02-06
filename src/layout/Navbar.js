@@ -18,7 +18,7 @@ const Navbar = ({ user }) => {
     const fetchUserCart = async () => {
       try {
         if (user && user.id) {
-          const response = await axios.get(`https://jumia-clone-rowland.onrender.com/api/products/cart/${user.id}`, {
+          const response = await axios.get(`https://row-buy.onrender.com/api/v1/products/cart/${user.id}`, {
             headers: {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${localStorage.getItem('accessToken')}`,

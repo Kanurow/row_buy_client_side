@@ -53,7 +53,7 @@ export default function Register() {
         }
 
         try {
-            await axios.post("https://jumia-clone-rowland.onrender.com/api/auth/signup", userData);
+            await axios.post("https://row-buy.onrender.com/api/v1/auth/signup", userData);
             navigate("/login");
         } catch (error) {
             setError(error.message);
